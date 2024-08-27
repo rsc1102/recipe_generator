@@ -1,0 +1,291 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Recipe Generator</title>
+        <meta name="description" content="Generate recipes from available items">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'app/style.css' %}">
+        <link rel="icon" href="{% static 'app/favicon.ico' %}" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <img src="{% static 'app/italian-spaghetti-with-tomato-sauce-pan.jpg' %}" alt="italian spaghetti with tomato sauce pan">
+            <div class="intro">
+                <h1 class="main-heading">
+                    Recipe Generator
+                </h1>
+                <p>
+                    Create personalized recipes using the ingredients you already have in your pantry.
+                </p>
+                <button id="get-started-button">Get Started</button>
+            </div>
+        </header>
+
+        <div class="choose-ingredients-div">
+            <div class="container">
+                <div class="food-category">
+                    <h4>Meats & Seafood</h4>
+                    <div class="category-items">
+                        <button class="item">Chicken Breasts</button>
+                        <button class="item">Ground Beef</button>
+                        <button class="item">Bacon</button>
+                        <button class="item">Sausage</button>
+                        <button class="item">Ham</button>
+                        <button class="item">Pork Chops</button>
+                        <button class="item">Steak</button>
+                        <button class="item">Turkey</button>
+                        <button class="item">Duck</button>
+                        <button class="item">Lamb</button>
+                        <button class="item">Chicken Thighs</button>
+                        <button class="item">Ground Pork</button>
+                        <button class="item">Chorizo</button>
+                        <button class="item">Chicken Wings</button>
+                        <button class="item">Shrimp</button>
+                        <button class="item">Salmon</button>
+                        <button class="item">Canned Tuna</button>
+                        <button class="item">Canned Sardines</button>
+                        <button class="item">Anchovies</button>
+                        <button class="item">Oysters</button>
+                        <button class="item">Mussels</button>
+                        <button class="item">Crab Meat</button>
+                    </div>
+                </div>
+                <div class="food-category">
+                    <h4>Vegetables</h4>
+                    <div class="category-items">
+                        <button class="item">Potatoes</button>
+                        <button class="item">Carrots</button>
+                        <button class="item">Celery</button>
+                        <button class="item">Bell Peppers</button>
+                        <button class="item">Broccoli</button>
+                        <button class="item">Cauliflower</button>
+                        <button class="item">Spinach</button>
+                        <button class="item">Kale</button>
+                        <button class="item">Lettuce</button>
+                        <button class="item">Cucumber</button>
+                        <button class="item">Zucchini</button>
+                        <button class="item">Eggplant</button>
+                        <button class="item">Mushrooms</button>
+                        <button class="item">Green Beans</button>
+                        <button class="item">Asparagus</button>
+                        <button class="item">Sweet Potatoes</button>
+                        <button class="item">Onions</button>
+                        <button class="item">Ginger</button>
+                        <button class="item">Tomatoes</button>
+                        <button class="item">Radishes</button>
+                        <button class="item">Beets</button>
+                        <button class="item">Corn</button>
+                        <button class="item">Peas</button>
+                        <button class="item">Avocado</button>
+                        <button class="item">Pumpkin</button>
+                        <button class="item">Turnips</button>
+                    </div>
+                </div>
+                <div class="food-category"><h4>Dairy & Miscellaneous</h4>
+                    <div class="category-items">
+                        <button class="item">Eggs</button>
+                        <button class="item">Milk</button>
+                        <button class="item">Parmesan Cheese</button>
+                        <button class="item">Cheddar Cheese</button>
+                        <button class="item">Cream Cheese</button>
+                        <button class="item">Sour Cream</button>
+                        <button class="item">Yogurt</button>
+                        <button class="item">Condensed Milk</button>
+                        <button class="item">Flour</button>
+                        <button class="item">Sugar</button>
+                        <button class="item">Brown Sugar</button>
+                        <button class="item">Baking Powder</button>
+                        <button class="item">Baking Soda</button>
+                        <button class="item">Cornstarch</button>
+                        <button class="item">Vanilla Extract</button>
+                        <button class="item">Cocoa Powder</button>
+                        <button class="item">Yeast</button>
+                        <button class="item">Breadcrumbs</button>
+                        <button class="item">Chicken Broth</button>
+                        <button class="item">Beef Stock</button>
+                        <button class="item">Pickles</button>
+                        <button class="item">Tofu</button>
+                    </div>
+                </div>
+                <div class="food-category">
+                    <h4>Basic Seasonings & Condiments</h4>
+                    <div class="category-items">
+                        <button class="item">Butter</button>
+                        <button class="item">Vinegar</button>
+                        <button class="item">Soy Sauce</button>
+                        <button class="item">Mustard</button>
+                        <button class="item">Ketchup</button>
+                        <button class="item">Mayonnaise</button>
+                        <button class="item">Worcestershire Sauce</button>
+                        <button class="item">Hot Sauce</button>
+                        <button class="item">Pasta Sauce</button>
+                        <button class="item">Apple Cider Vinegar</button>
+                        <button class="item">White Vinegar</button>
+                        <button class="item">Fish Sauce</button>
+                    </div>
+                </div>
+                <div class="food-category">
+                    <h4>Spices & Herbs</h4>
+                    <div class="category-items">
+                        <button class="item">Garlic</button>
+                        <button class="item">Cinnamon</button>
+                        <button class="item">Paprika</button>
+                        <button class="item">Cumin</button>
+                        <button class="item">Oregano</button>
+                        <button class="item">Basil</button>
+                        <button class="item">Parsley</button>
+                        <button class="item">Thyme</button>
+                        <button class="item">Rosemary</button>
+                        <button class="item">Cilantro</button>
+                        <button class="item">Nutmeg</button>
+                        <button class="item">Red Pepper Flakes</button>
+                        <button class="item">Turmeric</button>
+                        <button class="item">Bay Leaves</button>
+                        <button class="item">Chili Powder</button>
+                        <button class="item">Ground Coriander</button>
+                        <button class="item">Onion Powder</button>
+                        <button class="item">Saffron</button>
+                    </div>
+                </div>
+                <div class="food-category">
+                    <h4>Grains, Legumes, & Nuts</h4>
+                    <div class="category-items">
+                        <button class="item">Wheat</button>
+                        <button class="item">Rice</button>
+                        <button class="item">Oats</button>
+                        <button class="item">Almonds</button>
+                        <button class="item">Peanuts</button>
+                        <button class="item">Peanut Butter</button>
+                        <button class="item">Cornmeal</button>
+                        <button class="item">Polenta</button>
+                        <button class="item">Dried Beans</button>
+                        <button class="item">Lentils</button>
+                        <button class="item">Pine Nuts</button>
+                        <button class="item">Couscous</button>
+                        <button class="item">Quinoa</button>
+                        <button class="item">Pumpkin Seeds</button>
+                        <button class="item">Dried Pasta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="generate-recipes-button-div">
+                <button id="generate-recipes-button">Generate Recipe</button>
+            </div>
+        </div>
+        <div class="recipe-container" id="recipe-container">
+            <div class="loader hidden" id="loader"></div>
+            <div class="recipe-details" id="recipe-details">
+                <h2 id="recipe-name"></h2>
+                <h3>Ingredients:</h3>
+                <ul id="ingredients-list">
+                </ul>
+                <h3>Instructions:</h3>
+                <ul id="instructions-list"></ul>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+        <script async defer>
+            const get_started_button = document.getElementById("get-started-button");
+            const generate_recipes_button = document.getElementById("generate-recipes-button");
+            const recipe_container = document.getElementById("recipe-container");
+            const recipe_details = document.getElementById("recipe-details");
+            const loader = document.getElementById("loader");
+            const recipe_name = document.getElementById("recipe-name");
+            const ingredients_list = document.getElementById("ingredients-list");
+            const instructions_list = document.getElementById("instructions-list");
+
+            const items = [...document.getElementsByClassName('item')];
+
+            items.map(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('checked');
+                });
+            });
+
+            get_started_button.onclick = () => {
+                generate_recipes_button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            generate_recipes_button.onclick = async () => {
+                const checked_items = [...document.getElementsByClassName('checked')];
+                var item_names = [];
+                for (let i = 0; i < checked_items.length; i++) {
+                    item_names.push(checked_items[i].textContent);
+                }
+
+                recipe_container.style.display = 'flex';
+                loader.classList.toggle("hidden");
+                recipe_details.classList.toggle("hidden");
+                ingredients_list.replaceChildren();
+                instructions_list.replaceChildren();
+                loader.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                const url = "{% url 'generate_recipes' %}";
+                const csrftoken = "{{csrf_token }}"
+                try {
+                    const response = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRFToken': csrftoken 
+                            },
+                        body:JSON.stringify({ items: item_names })});
+                    if (!response.ok) {
+                        // Check if the status is 400 Bad Request
+                        if (response.status === 400) {
+                            // Parse the response to get the error message
+                            recipe_container.style.display = 'none';
+                            loader.classList.toggle("hidden");
+                            recipe_details.classList.toggle("hidden");
+                            return response.json().then(errorData => {
+                                // Log the error message from the server
+                                if(errorData.error === "Not enough ingredients"){
+                                    alert("Not enough ingredients, please select 4 or more.");
+                                }
+                            });
+                        }else{
+                            // Handle other response statuses
+                            throw new Error(`Response status: ${response.status}`);
+                        }
+                        
+                    }
+
+                    const json = await response.json();
+
+                    recipe_name.textContent = json['name'];
+
+                    for(let i=0;i<json['ingredients'].length;i++){
+                        const li = document.createElement('li');
+                        li.textContent = json['ingredients'][i];
+                        ingredients_list.appendChild(li);
+                    }
+
+                    for(let i=0;i<json['instructions'].length;i++){
+                        const li = document.createElement('li');
+                        li.textContent = json['instructions'][i];
+                        instructions_list.appendChild(li);
+                    }
+
+                    loader.classList.toggle("hidden");
+                    recipe_details.classList.toggle("hidden");
+                } catch (error) {
+                    // console.error(error.message);
+                    console.log("hmm");
+                    
+                }
+            }
+
+        </script>
+    </body>
+</html>
