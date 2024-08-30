@@ -1,14 +1,19 @@
-# Recipe Generator
+<h1 align="center">NYC Wifi Locator</h1>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/Vercel-white?style=plastic&logo=vercel&logoColor=black"  alt="Vercel badge"/>
+    <img src="https://img.shields.io/badge/Django-darkgreen?style=plastic&logo=django&logoColor=white" alt="Django badge"/>
+    <img src="https://img.shields.io/badge/OpenAI-white?style=plastic&logo=openai&logoColor=black" alt="OpenAI badge"/>
+</p>
 
 A web application that provides AI-driven recipe creation based on user-input ingredients and preferences. This project leverages Python, Django, and the OpenAI API to offer personalized, real-time recipe suggestions.
 
 ## Table of Contents
-- [Recipe Generator](#recipe-generator)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Technologies Used](#technologies-used)
-  - [Installation](#installation)
-  - [Usage](#usage)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
 
 ## Introduction
 
@@ -36,8 +41,10 @@ The Recipe Generator is a Django-based web application that generates recipe sug
    ```bash
     pip install -r requirements.txt
    ```
-4. Set up environment variables: Create a .env file in the root directory and add your OpenAI API key:
+4. Set up environment variables: Create a .env file in the root directory and add your secrets and OpenAI API key:
    ```bash
+    DEBUG="true"
+    SECRET_KEY="your-secret-key"
     OPENAI_API_KEY=your_openai_api_key
    ```
 5. Start the development server:
